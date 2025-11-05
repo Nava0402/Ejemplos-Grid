@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ejemplos de Grid</title>
+
+    <style>
+        .grid-area .header {
+            background-color: orangered;
+            grid-column-start: header;
+            grid-column-end: header;
+        }
+
+        .grid-area .sidebar {
+            background-color: lightseagreen;
+            grid-column: sidebar;
+            grid-row: sidebar;
+        }
+
+        .grid-area .content {
+            background-color: white;
+            color: black;
+            grid-area: content;
+        }
+        
+        .grid-area .sidebar2 {
+            background-color: limegreen;
+            grid-area: sidebar2;
+        }
+
+        .grid-area .widget {
+            background-color: lightcoral;
+            grid-area: widget;
+        }
+
+        .grid-area .footer {
+            background-color: teal;
+            grid-area: footer;
+        }
+
+        .grid-area {
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(4, auto);
+            grid-template-areas:
+                "header header header"
+                "sidebar content sidebar2"
+                "sidebar widget sidebar2"
+                "footer footer footer";
+        }
+        
+        .grid-repeat {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 2fr);
+            grid-gap: 50px;
+        }
+
+        .grid-porcentajes {
+            display: grid;
+            grid-template-columns: 10% 40% 20% 30%;
+            grid-template-rows: 30% 20% 30% 20%;
+        }
+
+        .grid-pixeles {
+            display: grid;
+            grid-template-columns: 200px 400px 300px 100px;
+            grid-template-rows: 200px 100px 300px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 3fr 2fr 1fr;
+            grid-template-rows: 2fr 3fr 1fr;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <h1>Fundamentos de Grid (CSS3)</h1>
+    </header>
+
+<br>
+
+    <h2>Grid con Fracciones (CSS3)</h2>    
+
+    <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+<br>
+
+    <h2>Grid con Pixeles (CSS3)</h1>
+
+    <div class="grid-pixeles">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+<br>
+    
+<h2>Grid con Porcentajes (CSS3)</h1>
+
+    <div class="grid-porcentajes">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+<br>
+
+<h2>Grid con Repeat (CSS3)</h2>
+
+    <div class="grid-repeat">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+<br>
+
+<h2>Grid con Area (CSS3)</h2>
+
+    <div class="grid-area">
+        <div class="header">1</div>
+        <div class="sidebar">2</div>
+        <div class="content">3</div>
+        <div class="widget">4</div>
+        <div class="sidebar2">5</div>
+        <div class="footer">6</div>
+    </div>
+
+<br>
+
+<h2>Grid con Flexbox (CCS3)</h2>
+    <div class="grid-flexbox">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+<br>
+
+    <div class="grid-flexbox2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+        <div>11</div>
+        <div>12</div>
+        <div>13</div>
+        <div>14</div>
+        <div>15</div>
+        <div>16</div>
+    </div>
+
+    
+</body>
+</html>
